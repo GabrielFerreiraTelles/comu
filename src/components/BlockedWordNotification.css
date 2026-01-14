@@ -1,0 +1,103 @@
+.blocked-notifications-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.blocked-notification {
+  background: white;
+  border: 2px solid #ff0000;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.notification-content {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.notification-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.notification-text {
+  flex: 1;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.notification-text strong {
+  color: #000000;
+  font-weight: 600;
+}
+
+.notification-message {
+  margin-top: 6px;
+  padding: 8px;
+  background: #f5f5f5;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+  border-left: 3px solid #ff0000;
+}
+
+.notification-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.block-btn,
+.ignore-btn {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.block-btn {
+  background: #ff0000;
+  color: white;
+}
+
+.block-btn:hover {
+  background: #cc0000;
+}
+
+.ignore-btn {
+  background: #f5f5f5;
+  color: #000000;
+  border: 1px solid #e0e0e0;
+}
+
+.ignore-btn:hover {
+  background: #e0e0e0;
+}
+
+
+

@@ -1,0 +1,155 @@
+.view-profile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.view-profile-modal {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.view-profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.view-profile-header h2 {
+  margin: 0;
+  color: #000000;
+  font-size: 24px;
+}
+
+.view-profile-content {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.view-profile-picture {
+  margin-bottom: 20px;
+}
+
+.profile-picture-large {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #000000;
+  margin: 0 auto;
+}
+
+.profile-picture-placeholder-large {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #000000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  font-weight: bold;
+  margin: 0 auto;
+  border: 4px solid #000000;
+}
+
+.view-profile-info {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.profile-nickname {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.profile-code {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: monospace;
+}
+
+.profile-section {
+  margin-bottom: 20px;
+}
+
+.profile-section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 8px 0;
+}
+
+.profile-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.profile-empty {
+  padding: 20px;
+  color: #999;
+  font-style: italic;
+  text-align: center;
+}
+
+.view-profile-actions {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.block-btn,
+.unblock-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.block-btn {
+  background: #d32f2f;
+  color: white;
+}
+
+.block-btn:hover {
+  background: #c62828;
+}
+
+.unblock-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.unblock-btn:hover {
+  background: #45a049;
+}
+
+
+

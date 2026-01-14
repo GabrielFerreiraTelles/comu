@@ -1,0 +1,445 @@
+.mobile-message-bubble {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  max-width: 85%;
+  margin-bottom: 6px;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-message-bubble.own {
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.mobile-message-bubble.other {
+  margin-right: auto;
+  justify-content: flex-start;
+}
+
+.mobile-message-bubble.pinned .mobile-message-content {
+  background: #ffd700 !important;
+  border: 2px solid #ffd700;
+  position: relative;
+}
+
+.mobile-message-bubble.pinned.own .mobile-message-content {
+  background: #ffd700 !important;
+  color: #000 !important;
+}
+
+.mobile-message-bubble.pinned .mobile-message-content::before {
+  content: '\f08d';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 14px;
+  color: #000;
+}
+
+.mobile-message-content {
+  background: white;
+  border-radius: 18px;
+  padding: 12px 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  position: relative;
+}
+
+.mobile-message-bubble.own .mobile-message-content {
+  background: #000000;
+  color: white;
+}
+
+.mobile-message-bubble.pending .mobile-message-content {
+  opacity: 0.7;
+  border: 2px dashed #999;
+}
+
+.mobile-message-text {
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.mobile-message-text strong {
+  font-weight: 600;
+}
+
+.mobile-message-text em {
+  font-style: italic;
+}
+
+.mobile-message-text code {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.mobile-message-bubble.own .mobile-message-text code {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.mobile-message-text pre {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 8px 0;
+}
+
+.mobile-message-bubble.own .mobile-message-text pre {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.mobile-message-text a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.mobile-message-bubble.own .mobile-message-text a {
+  color: #66b3ff;
+}
+
+.mobile-message-media-container {
+  position: relative;
+  display: inline-block;
+}
+
+.mobile-message-media {
+  max-width: 100%;
+  max-height: 250px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: block;
+}
+
+.mobile-message-gif {
+  max-height: 250px;
+  cursor: pointer;
+}
+
+.mobile-download-media-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 10;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-download-media-btn:active {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(0.95);
+}
+
+.mobile-download-media-btn i {
+  font-size: 16px;
+}
+
+.mobile-message-audio {
+  width: 100%;
+  min-width: 200px;
+}
+
+.mobile-message-reply-preview {
+  /* Cores padrão - serão sobrescritas pelo style inline se chatSettings estiver definido */
+  background: #f0f0f0 !important;
+  border-left: 3px solid #999;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  transition: border-color 0.2s;
+}
+
+.mobile-message-reply-preview:active {
+  opacity: 0.9;
+  border-left-color: var(--primary-color, #000000);
+}
+
+.mobile-reply-preview-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 12px;
+  /* Cor será definida pelo style inline */
+  color: #000000 !important;
+}
+
+.mobile-reply-preview-content {
+  /* Cor será definida pelo style inline */
+  color: #000000 !important;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mobile-message-footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.mobile-message-time {
+  font-size: 11px;
+}
+
+.mobile-message-edited {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.mobile-message-pending {
+  font-size: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mobile-message-sent,
+.mobile-message-read {
+  font-size: 11px;
+  margin-left: 4px;
+}
+
+.mobile-message-read {
+  color: #4fc3f7;
+}
+
+.mobile-message-bubble.own .mobile-message-read {
+  color: #4fc3f7;
+}
+
+.mobile-message-reactions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-message-bubble.own .mobile-message-reactions {
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.mobile-reaction-badge {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 6px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-message-bubble.own .mobile-reaction-badge {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.mobile-reaction-badge:active {
+  background: rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.mobile-message-bubble.own .mobile-reaction-badge:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.mobile-reaction-badge.active {
+  background: #e3f2fd;
+  border-color: #2196f3;
+}
+
+.mobile-message-bubble.own .mobile-reaction-badge.active {
+  background: rgba(33, 150, 243, 0.3);
+  border-color: rgba(33, 150, 243, 0.5);
+}
+
+/* Menu de contexto mobile */
+.mobile-message-context-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.2s ease;
+  padding: 20px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-message-context-menu {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 85vh;
+  overflow-y: auto;
+  animation: slideUpMobile 0.3s ease;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-context-menu-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-context-menu-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid #e8e8e8;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.mobile-context-menu-back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background 0.2s;
+  width: 40px;
+  height: 40px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-context-menu-back:active {
+  background: #f0f0f0;
+}
+
+.mobile-context-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+  width: 100%;
+  transition: background 0.2s;
+  margin-bottom: 4px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-context-menu-item:active {
+  background: #f5f5f5;
+  transform: scale(0.98);
+}
+
+.mobile-context-menu-item.danger {
+  color: #f44336;
+}
+
+.mobile-context-menu-item.danger:active {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.mobile-context-menu-item i {
+  width: 28px;
+  text-align: center;
+  font-size: 20px;
+  color: #666;
+}
+
+.mobile-context-menu-item span {
+  flex: 1;
+}
+
+.mobile-context-menu-close-btn {
+  width: 100%;
+  padding: 20px;
+  margin-top: 24px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-context-menu-close-btn:active {
+  background: #000;
+  transform: scale(0.98);
+}
+
+.mobile-reaction-picker {
+  display: flex;
+  gap: 8px;
+  background: white;
+  border-radius: 24px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mobile-reaction-option {
+  background: none;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-reaction-option:active {
+  background: #f0f0f0;
+  transform: scale(1.2);
+}
+
